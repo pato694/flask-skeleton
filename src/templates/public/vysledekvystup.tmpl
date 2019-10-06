@@ -1,0 +1,14 @@
+{% from "macros/fields.tmpl" import render_input_field, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}Vysledek vystup{% endblock %}
+
+{% block content %}
+ <table>
+    {% for radek in data %}
+        <tr><td><a href=/vystupuzivatele{{ radek.username }} > {{ radek.username }}</a></td>
+        <td>{{ radek.suma }}</td>
+    {% endfor %}
+    </table>
+
+{% endblock %}
